@@ -1,0 +1,4 @@
+user-agent: *
+Disallow: /admin/
+Disallow: /_css/
+Disallow: /_template/
