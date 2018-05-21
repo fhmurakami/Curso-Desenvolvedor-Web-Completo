@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Curso de CSS</title>
+        
+        <style>
+            html, body {
+                margin:0;
+                padding:0;
+            }
+
+            body {
+                background:rgb(229,229,229);
+            }
+
+            article, aside, section, header, footer, nav {
+                display:block;
+            }
+
+            main {
+                width: 960px;
+                margin: 0 auto;
+                box-shadow: 0 0 10px #333;
+                background: #FFF;
+            }
+
+            header {
+                width: 960px;
+                height: 110px;
+                background-color: #FF7F00;
+            }
+
+            nav {
+                width: 960px;
+                height: 40px;
+                background-color: #B28500;
+            }
+
+            .conteudo {
+                float: left;
+                width: 640px;
+                height: 350px;
+                background-color: #FFD24D;
+                margin-top: 10px;
+            }
+
+            .apoio {
+                float: right;
+                width: 310px;
+                height: 350px;
+                background-color: #DDDDDD;
+                margin-top: 10px;
+            }
+
+            footer {
+                width: 960px;
+                height: 40px;
+                background-color: #999999;
+                clear: both;
+                margin-top: 370px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <header></header>
+            <nav></nav>
+
+            <section class="conteudo"></section>
+            <section class="apoio"></section>
+
+            <footer>Endereco, telefone e outras informacoes</footer>
+        </main>
+    </body>
+</html>

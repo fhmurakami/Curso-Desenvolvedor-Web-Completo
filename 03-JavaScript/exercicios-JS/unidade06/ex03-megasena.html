@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+            var sorteio;
+            var mega = new Array();
+            
+            var i = 0;
+            while (i < 6) {
+                sorteio = Math.ceil(Math.random() * 60);
+                if (mega.indexOf(sorteio) < 0) {
+                        mega.push(sorteio);
+                        i++;
+                    }
+            }
+            mega.sort(function ordernar(a,b){return a-b;})
+            console.log(mega);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

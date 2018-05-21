@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+            var nome = "Curso Javascript Fundamental";
+            var primeira = "";
+            var segunda = "";
+            var i = 0;
+            
+            while (nome.charAt(i) != " ") {
+                i++;
+            }
+            
+            primeira = nome. substr(0, i);
+            i++;
+            var indiceSegunda = i;
+            while (nome.charAt(i) != " ") {
+                i++;
+            }
+            segunda = nome.substr(indiceSegunda, i-indiceSegunda);
+            console.log(primeira);
+            console.log(segunda);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

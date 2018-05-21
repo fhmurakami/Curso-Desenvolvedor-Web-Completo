@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+            var agora = new Date();
+            function relogio(horario) {
+                if (horario < 10) {
+                    return "0" + horario;
+                }
+                else {
+                    return horario;
+                }
+            }
+            console.log(relogio(agora.getHours()) + ":" + relogio(agora.getMinutes()) + ":" + relogio(agora.getSeconds()));
+            
+            var aniversario = new Date(1990, 8, 11, 10, 31, 27);
+            console.log(aniversario);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

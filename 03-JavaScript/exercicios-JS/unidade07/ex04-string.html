@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+            var nome = "felipe haruo MURAKAMI";
+            var primeira = "";
+            var camelCase = new Array();
+            //var maiusculas = nome.toUpperCase();
+            var minusculas = nome.toLowerCase().split(" ");
+            for (var i = 0; i < minusculas.length; i++) {
+                if (minusculas[i].length > 3) {
+                    primeira = minusculas[i].charAt(0).toUpperCase(); 
+                    camelCase[i] = primeira+minusculas[i].substr(1,minusculas[i].length);
+                } else {
+                    camelCase[i] = minusculas[i];
+                }
+                
+            }
+            camelCase = camelCase.join(" ");
+            console.log(camelCase);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

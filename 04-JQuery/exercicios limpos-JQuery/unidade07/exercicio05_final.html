@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Essencial</title>
+        
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        
+        <style>
+            
+            main {
+                width:1200px;
+                height: 300px;
+                margin:0 auto;
+                padding:0;
+            }
+            
+            div#direita {
+                position: relative;
+                width:200px;
+                height:200px;
+                margin:0;padding:0;
+            }
+            
+			#principal       { position:relative; height:200px; width:200px; overflow:hidden }
+			#janela          { position:absolute; height:200px; }
+			#janela img      { float:left  }
+			#info	         { position:absolute; top:400px }
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>       
+        <script>
+			$( function() {
+				var limite  = $('#janela img').length * $('#janela img').width() * -1;
+                var largura = (limite * (-1)) + $('#janela img').width();
+                
+                // alertas
+                //alert(limite, largura);
+                console.log(limite, largura);
+                
+				$('#janela').append('<img>');
+				$('#janela img:last').attr('src','imagens/foto1.jpg');
+                $('#janela').css('width',largura);
+				
+				function moverFotos() {					
+					$('#janela').animate({left:"-=200"},1000, function() {
+						$('#info').html( $('#janela').position().left );
+						if (   $('#janela').position().left == limite ) {
+							$('#janela').css('left',0);
+						}
+					});
+					
+				}
+				
+				setInterval( moverFotos, 2000 )
+			});	
+		</script>        
+    </head>
+
+    <body>
+        <main>
+            <div id="esquerda"></div>
+            <div id="meio"></div>
+            
+            <div id="direita">
+                <div id="principal">
+                    <div id="janela">
+                        <img src="imagens/foto1.jpg">
+                        <img src="imagens/foto2.jpg">
+                        <img src="imagens/foto3.jpg">
+                        <img src="imagens/foto4.jpg">
+                        <img src="imagens/foto5.jpg">
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <div id="info"></div>
+    </body>
+
+</html>

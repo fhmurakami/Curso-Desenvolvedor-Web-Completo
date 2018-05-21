@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+    <head>
+        <title>Unidade 02 - Elemento Head</title>
+        <meta charset="utf-8">
+        
+        <style>
+            body {
+                background: #ddd;
+                font-family: Arial, sans-serif;
+                color: #aaa;
+            }
+        </style>
+        
+        <script>
+            function escreverNome() {
+                // innerHTML -> para adicionar texto dinamicamente
+                nome.innerHTML = "Felipe Murakami";
+            }
+            
+            // Chama a função 'escreverNome' quando a janela é carregada:
+            window.onload = escreverNome;
+        </script>
+        
+    </head>
+    <body>
+        <p id="nome"></p>
+    </body>
+</html>

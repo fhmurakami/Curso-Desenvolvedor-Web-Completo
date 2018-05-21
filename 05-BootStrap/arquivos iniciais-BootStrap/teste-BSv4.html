@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Projeto</title>
+<meta name="author" content="Francisco Oliveira Web Design" />
+<meta name="description" content="Página de pesquisa de remédios da DETETIVE FARMA">
+        <meta name="generator" content="brackets">
+        <meta name="keywords" content="Farmácia, Produtos Farmaceuticos, Pesquisa de produtos, Remédio Barato, DETETIVE FARMA">
+        <meta name="application-name" content="DETETIVE FARMA">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="witdh=devide-width, initial-scale=1">    
+<!--<link href="css/bootstrap.min.css" rel="stylesheet"/>-->
+        <link href="bootstrap-4.0.0-dist/css/bootstrap.min.css" rel="stylesheet"/>
+               
+        <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+        
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#slide').cycle({ 
+        fx: 'fade',
+        speed: 3000,
+        });
+    });
+</script>
+</head>
+    <body>
+        <main>
+            <header>
+                <section class="logo"><img src="imagens/logo.png" alt="logo"></section>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="sobre.html">SOBRE</a></li>
+                    <li><a href="fale_conosco.html">CONTATO</a></li>
+                    <li><a href="cadastro.html">CADASTRO</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                </ul>
+            </nav>
+            <section>
+                <form class="pesquisa" action="index.html" method="post">
+                    <div class="form-inline">
+                        <input type="search" name="pesquisa" placeholder="Nome do Medicamento" required autofocus>
+                            <select name="bairroID" id="bairroID">
+                                <option value="1">Atuba</option>
+                                <option value="2">Augusta</option>
+                                <option value="3">Bacacheri</option>
+                                <option value="4">Bairro Alto</option>
+                                <option value="5">Barreirinha</option>
+                                <option value="6">Batel</option>
+                                <option value="7">Boa Vista</option>
+                                <option value="8">Bom Retiro</option>
+                                <option value="9">Boqueirão</option>
+                                <option value="10">Butiatuvinha</option>
+                                <option value="11">Cabral</option>
+                                <option value="12">Cachoeira</option>
+                                <option value="13">Cajuru</option>
+                                <option value="14">Campina do Siqueira</option>
+                                <option value="15">Campo Comprido</option>
+                                <option value="16">Campo de Santana</option>
+                                <option value="17">Capão da Imbuia</option>
+                                <option value="18">Capão Raso</option>
+                                <option value="19">Cascatinha</option>
+                                <option value="20">Centro</option>
+                                <option value="21">Caximba</option>
+                                <option value="22">Centro Cívico</option>
+                                <option value="23">Champagnat</option>
+                                <option value="24">Cidade Industrial</option>
+                                <option value="25">Cristo Rei</option>
+                                <option value="26">Fanny</option>
+                                <option value="27">Fazendinha</option>
+                                <option value="28">Ganchinho</option>
+                                <option value="29">Guabirotuba</option>
+                                <option value="30">Guaíra</option>
+                                <option value="31">Hauer</option>
+                                <option value="32">Hugo Lange</option>
+                                <option value="33">Jardim Botânico</option>
+                                <option value="34">Jardim Social</option>
+                                <option value="35">Jardim das Américas</option>
+                                <option value="36">Juvevê</option>
+                                <option value="37">Lamenha Pequena</option>
+                                <option value="38">Lindoia</option>
+                                <option value="39">Mercês</option>
+                                <option value="40">Mossunguê (Ecoville)</option>
+                                <option value="41">Novo Mundo</option>
+                                <option value="42">Orleans</option>
+                                <option value="43">Parolin</option>
+                                <option value="44">Pilarzinho</option>
+                                <option value="45">Pinheirinho</option>
+                                <option value="46">Portão</option>
+                                <option value="47">Prado Velho</option>
+                                <option value="48">Rebouças</option>
+                                <option value="49">Riviera</option>
+                                <option value="50">Santa Felicidade</option>
+                                <option value="51">Santa Quitéria</option>
+                                <option value="55">Santo Inácio</option>
+                                <option value="53">São Braz</option>
+                                <option value="54">São Francisco</option>
+                                <option value="55">São João</option>
+                                <option value="56">São Lourenço</option>
+                                <option value="57">São Miguel</option>
+                                <option value="58">Seminário</option>
+                                <option value="59">Sítio Cercado</option>
+                                <option value="60">Taboão</option>
+                                <option value="61">Tarumã</option>
+                                <option value="62">Tatuquara</option>
+                                <option value="63">Tingui</option>
+                                <option value="64">Uberaba</option>
+                                <option value="65">Umbará</option>
+                                <option value="66">Vila Izabel</option>
+                                <option value="67">Vista Alegre</option>
+                                <option value="68">Xaxim</option>
+                            </select>
+                        <input type="submit" value="Pesquisar" class="btn btn-primary">
+                    </div>    
+                </form>
+                <div class="carousel slide" data-ride="carousel" id="galeria">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="img-responsive" src="unidade09/_img/20160312_142956.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-responsive" src="unidade09/_img/20160312_153210.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-responsive" src="unidade09/_img/20160313_154922.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-responsive" src="unidade09/_img/20160313_180102.jpg">
+                        </div>
+                        <a class="left carousel-control-prev" href="#galeria" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="right carousel-control-next" href="#galeria" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                        </section>
+            <aside>CONTEÚDO RELACIONADO</aside>
+            <footer>RODAPÉ</footer>
+        </main>
+        <script src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+        <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script> 
+        <script src="_js/script.js"></script> 
+    </body>
+</html>

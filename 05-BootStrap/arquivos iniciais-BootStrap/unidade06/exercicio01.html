@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Curso de Bootstrap</title>
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="_css/estilo.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Digite abaixo seu codigo -->
+        <div class="container">
+            <form>
+                <!-- form-group: cria um grupo no formulário e aumenta a distância entre eles -->
+                <div class="form-group">
+                    <!-- <label class="sr-only"> esconde o label, ficando apenas o campo de texto -->
+                    <label for="nome">Nome Completo</label>
+                    <!-- form-control: ocupa toda a largura do container -->
+                    <input class="form-control" type="text" id="nome" placeholder="Nome"/>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control" type="text" id="email" placeholder="Email"/>
+                </div>
+                
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input class="form-control" type="password" id="senha" placeholder="Senha"/>
+                </div>  
+                
+                <div class="form-group">
+                    <label for="selecao">Prato preferido?</label>
+                    <select class="form-control" id="selecao">
+                        <option>Escolha uma opção</option>
+                        <option>Feijoada</option>
+                        <option>Churrasco</option>
+                        <option>Sushi</option>
+                        <option>Pizza</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comentario">Comentários</label>
+                    <textarea class="form-control" id="comentario"></textarea>
+                </div>
+                
+                <div class="checkbox">
+                    <label for="lista">
+                        <input type="checkbox" id="lista">Inscrever-me na newsletter
+                    </label>
+                </div>
+                
+                <input class="btn btn-primary pull-right btn-block btn-lg" type="submit" value="Enviar">
+            </form>
+        </div>
+        <!-- Fim do seu codigo -->
+        <script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="_js/script.js"></script>
+    </body>
+</html>

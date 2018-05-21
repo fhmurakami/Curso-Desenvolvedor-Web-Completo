@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+            var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+            var semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+            var agora = new Date();
+            console.log(agora.getDate() + " de " + meses[agora.getMonth()] + " de " + agora.getFullYear());
+            
+            var aniversario = new Date(1990, 8, 11);
+            console.log(semana[aniversario.getDay()]);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

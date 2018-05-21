@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Curso de EcmaScript 6.0</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
+        <script type="text/babel">
+        
+            // Método BIND:
+            var jogador1 = {
+                nome:"Gabriel Jesus",
+                habilidades:["chutar","driblar","correr","fazer gols"],
+                escreverHabilidades: function() {
+                    this.habilidades.forEach(function(skill) {
+                        console.log(this.nome + " é craque em " + skill);   
+                    }.bind(this));
+                }
+            }
+        
+            // Método ARROW FUNCTION:
+            var jogador2 = {
+                nome:"Keno",
+                habilidades:["chutar","driblar","correr","fazer gols"],
+                escreverHabilidades() {
+                    this.habilidades.forEach(skill => {
+                        console.log(this.nome + " é craque em " + skill);   
+                    });
+                }
+            }
+            
+            jogador1.escreverHabilidades();
+            jogador2.escreverHabilidades();
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
