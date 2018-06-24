@@ -76,7 +76,16 @@
                 }).then(sucesso, falha)
                 
                 function sucesso(data) {
-                    console.log(data);
+                    $sucesso = $.parseJSON(data)["sucesso"];
+                    $mensagem = $.parseJSON(data)["mensagem"];
+                    // mostra a div#mensagem (muda css para display:block):
+                    $("#mensagem").show();
+                    
+                    if ($sucesso) {
+                        $('#mensagem p').html($mensagem);
+                    } else {
+                        $('#mensagem p').html($mensagem);
+                    }
                 }
                 
                 function falha() {
