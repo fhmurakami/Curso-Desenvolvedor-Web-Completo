@@ -64,8 +64,27 @@
             $('#formulario_transportadora').submit(function(e) {
                 e.preventDefault();
                 var formulario = $(this);
-                alert(formulario.serialize());
+                var retorno = inserirFormulario(formulario);
             });
+            
+            function inserirFormulario(dados) {
+                $.ajax({
+                    type: "POST",
+                    data: dados.serialize(),
+                    url: "inserir_transportadora.php",
+                    async: false
+                }).then(sucesso, falha)
+                
+                function sucesso(data) {
+                    console.log(data);
+                }
+                
+                function falha() {
+                    console.log("Erro");
+                }
+                
+            }
+            
         </script>
     </body>
 </html>
