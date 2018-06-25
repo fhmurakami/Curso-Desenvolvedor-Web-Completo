@@ -12,8 +12,8 @@
                 <form id="pesquisarProdutos">
                     <label for="categorias">Categorias</label>
                     <select id="categorias">
-                        
                     </select>
+                    <div id="teste"></div>
                 </form>
             </div>
         </main>
@@ -38,7 +38,12 @@
                     url: "http://localhost/php_ajax/unidade_11/retornar_produtos.php",
                     async: false
                 }).done(function(data) {
-                    console.log($.parseJSON(data));
+                    var lista = "<ul>";
+                    $.each($.parseJSON(data), function(chave, valor) {
+                        lista += "<li>" + valor.nomeproduto + "</li>";
+                    });
+                    lista += "</ul>";
+                    $('#teste').html(lista);
                 })
             });
             
