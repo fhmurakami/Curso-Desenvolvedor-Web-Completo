@@ -1,6 +1,7 @@
 <?php 
     $callback = isset($_GET['callback']) ?  $_GET['callback'] : false;
     $conecta = mysqli_connect("localhost","root","","andes");
+    mysqli_set_charset($conecta, 'utf8');
 
     if(isset($_GET['categoriaID'])) {
         $catID = $_GET['categoriaID'];

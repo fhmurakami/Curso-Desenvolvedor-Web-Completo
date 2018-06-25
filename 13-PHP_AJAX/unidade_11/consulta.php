@@ -28,6 +28,20 @@
                 });
                 $('#categorias').html(categorias);
             }
+            
+            $('#categorias').change(function(e) {
+                var categoriaID = $(this).val();
+                
+                $.ajax({
+                    type: "GET",
+                    data: "categoriaID=" + categoriaID,
+                    url: "http://localhost/php_ajax/unidade_11/retornar_produtos.php",
+                    async: false
+                }).done(function(data) {
+                    console.log($.parseJSON(data));
+                })
+            });
+            
         </script>
         <script src="http://localhost/php_ajax/unidade_11/retornar_categorias.php?callback=retornarCategorias"></script>
     </body>
