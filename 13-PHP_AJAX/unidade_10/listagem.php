@@ -32,7 +32,7 @@
                 <ul>
                     <li><?php echo utf8_encode($linha["nometransportadora"]) ?></li>
                     <li><?php echo utf8_encode($linha["cidade"]) ?></li>
-                    <li><a href="" class="excluir">Excluir</a></li>
+                    <li><a href="" class="excluir" title="<?php echo $linha["transportadoraID"] ?>">Excluir</a></li>
                 </ul>
                 <?php
                     }
@@ -45,7 +45,26 @@
         <script>
             $('#janela_transportadoras ul li a.excluir').click(function(e) {
                 e.preventDefault(); 
-                $(this).parent().parent().fadeOut();
+                
+                var id = $(this).attr("title");
+                var elemento = $(this).parent().parent();
+                
+                $.ajax({
+                    type: "POST",
+                    data: "transportadoraID=" + id,
+                    url: "exclusao.php",
+                    async: true
+                }).done(function(data) {
+                    $sucesso = $.parseJSON(data)["sucesso"];
+                    
+                    if ($sucesso) {
+                        $(elemento).fadeOut();
+                    } else {
+                        console.log("erro na exclusão");
+                    }
+                }).fail(function() {
+                    console.log("erro no sistema");
+                });
             });
         </script>
     </body>
