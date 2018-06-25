@@ -31,8 +31,8 @@
                 $('#categorias').html(categorias);
             }
             
-            $('#categorias').change(function(e) {
-                var categoriaID = $(this).val();
+            function carregarProdutos() {
+                var categoriaID = $('#categorias').val();
                 
                 $.ajax({
                     type: "GET",
@@ -47,6 +47,14 @@
                     
                     $('#produtos').html(produtos);
                 });
+            }
+            
+            $(window).load(function(e) {
+                carregarProdutos();
+            });
+            
+            $('#categorias').change(function(e) {
+                carregarProdutos();
             });
             
         </script>
